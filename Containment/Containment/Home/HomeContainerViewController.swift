@@ -12,6 +12,7 @@ class HomeContainerViewController : BaseContainerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Home1"
         fetchData()
     }
     
@@ -19,8 +20,7 @@ class HomeContainerViewController : BaseContainerViewController {
         
         let homeViewController = HomeViewController()
         homeViewController.items = items
-        let nvc = UINavigationController.init(rootViewController: homeViewController)
-        self.containerStateViewController.transition(to: .render(nvc))
+        self.containerStateViewController.transition(to: .render(homeViewController))
     }
     
     func fetchData() {

@@ -23,21 +23,24 @@ class ContainmentTabBarController : UITabBarController {
     func firstTabBarViewController() -> UIViewController {
         
         let vc = HomeContainerViewController()
-        vc.tabBarItem.title = "First"
-        return vc
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.tabBarItem.title = "First"
+        return nvc
     }
     
     func secondTabBarViewController() -> UIViewController {
         
         let vc = HomeContainerViewController()
-        vc.tabBarItem.title = "Second"
-        return vc
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.tabBarItem.title = "Second"
+        return nvc
     }
     
     func thirdTabBarViewController() -> UIViewController {
         
         let vc = HomeContainerViewController()
-        vc.tabBarItem.title = "Third"
-        return vc
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.tabBarItem.title = "Third"
+        return nvc
     }
 }

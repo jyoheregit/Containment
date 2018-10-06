@@ -8,14 +8,26 @@
 
 import UIKit
 
-class BaseContainerViewController : UIViewController {
+class BaseContainerViewController : UIViewController, UISearchBarDelegate {
     
     lazy var containerStateViewController = ContainerStateViewController()
+    
+    lazy var searchController : UISearchController = {
+        let searchController = UISearchController(searchResultsController: HomeViewController())
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.definesPresentationContext = true
+        searchController.searchBar.placeholder = "Search here..."
+        searchController.searchBar.delegate = self
+        searchController.searchBar.sizeToFit()
+        return searchController
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         add(containerStateViewController)
         self.view.backgroundColor = UIColor.white
+        self.navigationItem.searchController = searchController
     }
     
     func showErrorViewController(){
@@ -34,4 +46,12 @@ class BaseContainerViewController : UIViewController {
             self.containerStateViewController.transition(to: .render(vc))
         }
     }
+}
+
+extension BaseContainerViewController : UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
 }
