@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14C0419216AA9AE00DC511A /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C0418216AA9AE00DC511A /* TableViewHelper.swift */; };
 		B158F9A9215919E800AA9EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B158F9A8215919E800AA9EB1 /* AppDelegate.swift */; };
 		B158F9B0215919E900AA9EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B158F9AF215919E900AA9EB1 /* Assets.xcassets */; };
 		B158F9B3215919E900AA9EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B158F9B1215919E900AA9EB1 /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B14C0418216AA9AE00DC511A /* TableViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		B158F9A5215919E800AA9EB1 /* Containment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Containment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B158F9A8215919E800AA9EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B158F9AF215919E900AA9EB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B14C0417216AA96700DC511A /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B14C0418216AA9AE00DC511A /* TableViewHelper.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		B158F99C215919E800AA9EB1 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		B158F9D72159365E00AA9EB1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B14C0417216AA96700DC511A /* TableView */,
 				B158F9D82159366C00AA9EB1 /* ViewControllers */,
 			);
 			path = Common;
@@ -266,6 +277,7 @@
 				B158F9D621592ABC00AA9EB1 /* BaseTableViewController.swift in Sources */,
 				B158F9C921591A5000AA9EB1 /* ContainerStateViewController.swift in Sources */,
 				B158F9DB215936C200AA9EB1 /* HomeContainerViewController.swift in Sources */,
+				B14C0419216AA9AE00DC511A /* TableViewHelper.swift in Sources */,
 				B158F9D02159207F00AA9EB1 /* UIView+Layout.swift in Sources */,
 				B158F9CD21591A9F00AA9EB1 /* ErrorViewController.swift in Sources */,
 				B158F9DF21593BCE00AA9EB1 /* ContainmentTabBarController.swift in Sources */,

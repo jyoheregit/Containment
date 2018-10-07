@@ -19,7 +19,7 @@ class HomeContainerViewController : BaseContainerViewController {
     func showHomeViewController(items : Array<Int>) {
         
         let homeViewController = HomeViewController()
-        homeViewController.items = items
+        //homeViewController.items = items
         self.containerStateViewController.transition(to: .render(homeViewController))
     }
     
