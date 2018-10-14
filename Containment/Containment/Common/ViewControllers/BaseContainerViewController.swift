@@ -13,12 +13,13 @@ class BaseContainerViewController : UIViewController, UISearchBarDelegate {
     lazy var containerStateViewController = ContainerStateViewController()
     
     lazy var searchController : UISearchController = {
-        let searchController = UISearchController(searchResultsController: HomeViewController())
+        let homeVC = HomeViewController()
+        let searchController = UISearchController(searchResultsController: homeVC)
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.definesPresentationContext = true
         searchController.searchBar.placeholder = "Search here..."
-        searchController.searchBar.delegate = self
+        //searchController.searchBar.delegate = homeVC
         searchController.searchBar.sizeToFit()
         return searchController
     }()
@@ -27,7 +28,17 @@ class BaseContainerViewController : UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         add(containerStateViewController)
         self.view.backgroundColor = UIColor.white
-        self.navigationItem.searchController = searchController
+        //self.navigationItem.searchController = searchController
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.backgroundColor = .gray
+        if let frame = self.navigationController?.navigationBar.frame {
+            let navigationView = NavigationView(frame: CGRect(x: 0, y: 0, width: frame.size.width-24, height: frame.size.height))
+            navigationView.searchBar.delegate = self
+            self.navigationItem.titleView = navigationView
+        }
     }
     
     func showErrorViewController(){
@@ -45,6 +56,10 @@ class BaseContainerViewController : UIViewController, UISearchBarDelegate {
             let vc = BaseTableViewController()
             self.containerStateViewController.transition(to: .render(vc))
         }
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.present(searchController, animated: true, completion: nil)
     }
 }
 

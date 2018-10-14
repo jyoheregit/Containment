@@ -48,9 +48,13 @@ import Foundation
 import UIKit
 
 class BaseTableViewController: UIViewController {
-        
+    
+    lazy var viewHelper = TableViewHelper()
+    
     lazy var tableView : UITableView = {
         let tableView = UITableView(frame: self.view.frame)
+        tableView.dataSource = viewHelper
+        tableView.delegate = viewHelper
         return tableView
     }()
     

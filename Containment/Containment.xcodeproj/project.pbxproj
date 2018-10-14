@@ -23,6 +23,8 @@
 		B158F9DD215936D400AA9EB1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B158F9DC215936D400AA9EB1 /* HomeViewController.swift */; };
 		B158F9DF21593BCE00AA9EB1 /* ContainmentTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B158F9DE21593BCE00AA9EB1 /* ContainmentTabBarController.swift */; };
 		B158F9E1215942C300AA9EB1 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B158F9E0215942C300AA9EB1 /* HomeDataSource.swift */; };
+		B1EBDBAC216DF4DF00CB8D35 /* TableViewCellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBDBAB216DF4DF00CB8D35 /* TableViewCellHelper.swift */; };
+		B1EBDBB1216E23F200CB8D35 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBDBB0216E23F200CB8D35 /* NavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		B158F9DC215936D400AA9EB1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B158F9DE21593BCE00AA9EB1 /* ContainmentTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainmentTabBarController.swift; sourceTree = "<group>"; };
 		B158F9E0215942C300AA9EB1 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		B1EBDBAB216DF4DF00CB8D35 /* TableViewCellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellHelper.swift; sourceTree = "<group>"; };
+		B1EBDBB0216E23F200CB8D35 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B14C0418216AA9AE00DC511A /* TableViewHelper.swift */,
+				B1EBDBAB216DF4DF00CB8D35 /* TableViewCellHelper.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		B158F9A7215919E800AA9EB1 /* Containment */ = {
 			isa = PBXGroup;
 			children = (
+				B1EBDBAD216E235B00CB8D35 /* Navigation */,
 				B158F9D9215936AA00AA9EB1 /* Home */,
 				B158F9D72159365E00AA9EB1 /* Common */,
 				B158F9CE2159205D00AA9EB1 /* Extension */,
@@ -172,6 +178,14 @@
 				B158F9AF215919E900AA9EB1 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B1EBDBAD216E235B00CB8D35 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B1EBDBB0216E23F200CB8D35 /* NavigationView.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +293,9 @@
 				B158F9DB215936C200AA9EB1 /* HomeContainerViewController.swift in Sources */,
 				B14C0419216AA9AE00DC511A /* TableViewHelper.swift in Sources */,
 				B158F9D02159207F00AA9EB1 /* UIView+Layout.swift in Sources */,
+				B1EBDBAC216DF4DF00CB8D35 /* TableViewCellHelper.swift in Sources */,
 				B158F9CD21591A9F00AA9EB1 /* ErrorViewController.swift in Sources */,
+				B1EBDBB1216E23F200CB8D35 /* NavigationView.swift in Sources */,
 				B158F9DF21593BCE00AA9EB1 /* ContainmentTabBarController.swift in Sources */,
 				B158F9DD215936D400AA9EB1 /* HomeViewController.swift in Sources */,
 				B158F9E1215942C300AA9EB1 /* HomeDataSource.swift in Sources */,
